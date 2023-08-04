@@ -14,7 +14,10 @@
 .hoverunderline {
     position: relative;
     cursor: pointer;
+
     li:hover {
+        border: 1px solid red;
+
         &::after {
             content: "";
             margin-top: 5px;
@@ -27,4 +30,14 @@
             transform: translate(-50%);
         }
     }
+}
+
+.mobilenav {
+    li {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1.75rem;
+    }
+
 }

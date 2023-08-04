@@ -1,0 +1,5 @@
+.buttonhover:hover {
+  transition: 0.2s ease;
+  background-color: black;
+  color: white;
+}/*# sourceMappingURL=creation.module.css.map */
