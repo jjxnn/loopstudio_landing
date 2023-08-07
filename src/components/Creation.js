@@ -5,6 +5,8 @@ import creation from '../styles/creation.module.scss'
 const Creation = () => {
 
     return(
+        <>
+        <h2 className={`text-[2rem] text-center mt-16 mb-4 ${app.text}`}>Our Creations</h2>
         <section className="p-2 flex flex-col items-center">
             {mobile_img.map((image) => {
                 return(
@@ -18,6 +20,8 @@ const Creation = () => {
             <button className={`p-3 text-black border-black border-2 w-48 mt-4 ${creation.buttonhover}`}>
                 <span className="uppercase tracking-[0.25rem] font-bold">See All</span></button>
         </section>
+        </>
+        
     )
 }
 

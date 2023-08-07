@@ -6,13 +6,13 @@ import app from '../styles/app.module.scss'
 import { useState } from 'react'
 import { styled } from 'styled-components'
 const HeaderStyle = styled.section`
-    background: ${props => props.width < 1024 ? `url('../images/mobile/image-hero.jpg')` : `url('../images/desktop/image-hero.jpg')`} no-repeat;
+    background: url('../images/desktop/image-hero.jpg') no-repeat rgba(0,0,0,0.4);
+    background-position: center;
     background-size: cover;
     width: 100%;
-    background-position:50% 50%;
     height: 80vh;
-    object-fit: cover;
     image-rendering: -webkit-optimize-contrast;
+    background-blend-mode: darken;
 
 `
 const Header = () => {
@@ -57,26 +57,26 @@ const Header = () => {
         return(<MobileHeader/>)
     } else {
         return(
-           <HeaderStyle width={window.innerWidth} className={`p-4 flex flex-col p-16`}>
-
-                <section className='flex justify-between items-center mt-4'>
+           <HeaderStyle className={`flex flex-col lg:px-36 lg:pr-36 p-4`}>
+                <section className='flex justify-between items-center mt-8 lg:mt-16'>
                     <header className={`flex justify-between`}>
                         <img src={logo} alt="logo" />
                     </header>
                     <img className="aspect-auto lg:hidden" src={hamburger} alt='mobile-hamburger-icon' onClick={() => hamburgerMenu()} />
                     <nav className='hidden lg:block'>
-                        <ul className={`flex flex-row gap-4 ${app.hoverunderline} text-white`}>
+                        <ul className={`flex flex-row gap-4 ${app.hoverunderline} text-white lg:gap-12`}>
                             <li>About</li>
                             <li>Careers</li>
+                            <li>Events</li>
                             <li>Products</li>
                             <li>Support</li>
                         </ul>
                     </nav>
                 </section>
 
-                <section className={`p-4 border-solid border-2 border-white my-auto w-100 lg:w-6/12`}>
-                    <span className={`text-4xl antialiased uppercase text-white table-caption ${app.text}`}>
-                        Immersive experiences that <br />deliver
+                <section className={`p-4 border-solid border-2 border-white my-auto lg:max-w-[60%]`}>
+                    <span className={`text-4xl antialiased uppercase text-white table-caption ${app.text} lg:text-7xl lg:p-4 lg:pr-20`}>
+                        Immersive experiences that deliver
                     </span>
                 </section>
             </HeaderStyle> 

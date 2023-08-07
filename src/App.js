@@ -1,20 +1,32 @@
 
 import './App.scss';
-import app_style from './styles/app.module.scss'
 import About from './components/About';
 import Footer from './components/Footer';
 import Header from './components/Header'
 import Creation from './components/Creation';
+import DesktopCreation from './components/DesktopCreation';
+import { useEffect, useState } from 'react';
+
 
 const App = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 1024;
+  useEffect(() => {
+   const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
   return (
     <>
       <Header/>
     
-    <main className="App">
+    <main className="App p-8 lg:p-32">
       <About/>
-      <h2 className={`text-[2rem] text-center mt-16 mb-4 ${app_style.text}`}>Our Creations</h2>
-      <Creation/>
+      { width < 1024 ? <Creation/> : <DesktopCreation/>}
     </main>
 
     <Footer/>
