@@ -14,10 +14,10 @@ const DesktopCreation = () => {
             {mobile_desktop.map((image) => {
                 return(
                     
-                <section className="relative m-4 inline-block">
+                <section className="relative m-4 inline-block hover:text-black">
                     
-                <img src={image.src} alt="thumbnail-img"/>
-                <p className={` ${app.text} text-[2rem] leading-none absolute bottom-8 left-8 text-white w-[60%] uppercase` }>
+                <img className='hover:opacity-50 hover:cursor-pointer ' src={image.src} alt="thumbnail-img"/>
+                <p className={` ${app.text} text-[2rem] leading-none absolute bottom-8 left-8 text-white w-[60%] uppercase ` }>
                 {image.name}
                 </p>
                 </section>)

@@ -20,9 +20,9 @@ const Footer = () => {
                 </ul>
             </section>
 
-            <section className='flex flex-col items-center'>
-                <div className='flex gap-4 sm:mt-12'>
-                    <img src={facebook} alt="facebook-logo" />
+            <section className='flex flex-col items-center lg:gap-4'>
+                <div className='flex gap-4 sm:mt-12 lg:ml-auto lg:mr-0'>
+                    <img className='' src={facebook} alt="facebook-logo" />
                     <img src={twitter} alt="twitter-logo" />
                     <img src={pinterest} alt="pinterest-logo" />
                     <img src={instagram} alt="instagram-logo" />
