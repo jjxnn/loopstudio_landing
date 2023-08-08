@@ -16,8 +16,6 @@
     cursor: pointer;
 
     li:hover {
-        border: 1px solid red;
-
         &::after {
             content: "";
             margin-top: 5px;

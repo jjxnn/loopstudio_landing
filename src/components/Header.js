@@ -65,11 +65,11 @@ const Header = () => {
                     <img className="aspect-auto lg:hidden" src={hamburger} alt='mobile-hamburger-icon' onClick={() => hamburgerMenu()} />
                     <nav className='hidden lg:block'>
                         <ul className={`flex flex-row gap-4 ${app.hoverunderline} text-white lg:gap-12`}>
-                            <li>About</li>
-                            <li>Careers</li>
-                            <li>Events</li>
-                            <li>Products</li>
-                            <li>Support</li>
+                            <li className={`${app.hoverunderline}`}>About</li>
+                            <li className={`${app.hoverunderline}`}>Careers</li>
+                            <li className={`${app.hoverunderline}`}>Events</li>
+                            <li className={`${app.hoverunderline}`}>Products</li>
+                            <li className={`${app.hoverunderline}`}>Support</li>
                         </ul>
                     </nav>
                 </section>

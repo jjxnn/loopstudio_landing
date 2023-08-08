@@ -12,7 +12,7 @@ const Creation = () => {
                 return(
                 <section className="relative m-4">
                 <img src={image.src} alt="thumbnail-img"/>
-                <p className={` ${app.text} text-[1.5rem] leading-none absolute bottom-4 left-4 text-white table-caption w-2/5 uppercase` }>
+                <p className={` ${app.text} text-[1.5rem] leading-none absolute bottom-4 left-4 text-white table-caption w-1/2 uppercase` }>
                 {image.name}
                 </p>
                 </section>)

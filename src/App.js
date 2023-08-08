@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
   const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 1024;
   useEffect(() => {
    const handleResizeWindow = () => setWidth(window.innerWidth);
     // subscribe to window resize event "onComponentDidMount"
@@ -24,7 +23,7 @@ const App = () => {
     <>
       <Header/>
     
-    <main className="App p-8 lg:p-32">
+    <main className="App p-8 lg:p-32 flex flex-col gap-8">
       <About/>
       { width < 1024 ? <Creation/> : <DesktopCreation/>}
     </main>
