@@ -5,3 +5,12 @@
         color: white;
     }
 }
+
+
+.imagecont {
+    &:hover {
+        p {
+            color: black;
+        }
+    }
+}
