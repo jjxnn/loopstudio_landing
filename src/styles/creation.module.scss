@@ -8,6 +8,7 @@
 
 
 .imagecont {
+    transition: 0.3s ease;
     &:hover {
         p {
             color: black;

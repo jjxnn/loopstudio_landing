@@ -7,10 +7,10 @@ import instagram from '../images/icon-instagram.svg'
 import app from '../styles/app.module.scss'
 const Footer = () => {
     return (
-        <footer className='bg-black flex sm:flex-col text-white items-center mt-24 
+        <footer className='bg-black flex flex-col text-white items-center mt-24 
         lg:flex-row lg:justify-between lg:pr-36 lg:px-36'>
             <section>
-                <img className="sm:mt-12 lg:m-4" src={logo} alt="logo" />
+                <img className="mt-12 lg:m-4" src={logo} alt="logo" />
                 <ul className={`flex flex-col gap-4 items-center mt-8 ${app.hoverunderline} lg:flex-row lg:m-4`}>
                     <li className={`${app.hoverunderline}`}>About</li>
                     <li className={`${app.hoverunderline}`}>Careers</li>
@@ -21,7 +21,7 @@ const Footer = () => {
             </section>
 
             <section className='flex flex-col items-center lg:gap-4'>
-                <div className='flex gap-4 sm:mt-12 lg:ml-auto lg:mr-0'>
+                <div className='flex gap-4 mt-12 lg:ml-auto lg:mr-0'>
                     <img className='' src={facebook} alt="facebook-logo" />
                     <img src={twitter} alt="twitter-logo" />
                     <img src={pinterest} alt="pinterest-logo" />
